@@ -176,30 +176,28 @@ export default function Home() {
           </div>
           <div className="thesis-grid">
             <h2 data-reveal>
-              Billing errors are not the exception.<br />
-              <em>They are the operating environment.</em>
+              Billing errors are far too common.<br />
+              <em>Sable gives you the evidence to take it back.</em>
             </h2>
             <div className="thesis-copy" data-reveal>
               <p>
-                Freight-audit providers commonly estimate that 5% to 15% of
-                transportation invoices contain errors. The exact rate varies by
-                mode, carrier mix, contract complexity, and internal controls.
+                Industry consensus is that 5% to 15% of transportation invoices
+                contain errors. The exact rate varies by mode, carrier mix,
+                contract complexity, and internal controls.
               </p>
               <p>
-                At $5 million in annual transportation spend, every single
-                percentage point equals $50,000. Sable tests each charge before
-                it becomes accepted spend.
+                At $5 million in annual transportation spend, 7% in billing
+                leakage equals $350,000. Sable validates every charge before it
+                becomes accepted spend.
               </p>
             </div>
           </div>
           <div className="thesis-rail" data-reveal>
-            <article><strong>5–15%</strong><span>Commonly cited invoice-error range</span></article>
-            <article><strong>$50K</strong><span>Every 1% of $5M in annual spend</span></article>
-            <article><strong>$150K</strong><span>At 3% billing leakage on $5M</span></article>
+            <article><strong>5–15%</strong><span>Industry consensus invoice-error range</span></article>
             <article><strong>$350K</strong><span>At 7% billing leakage on $5M</span></article>
           </div>
           <p className="thesis-context" data-reveal>
-            Industry estimate and illustrative scenario only. Actual invoice-error and recovery rates vary.
+            Industry estimate and illustrative 7% scenario only. Actual invoice-error and recovery rates vary.
           </p>
         </section>
 
@@ -249,7 +247,7 @@ export default function Home() {
             </article>
             <article data-reveal>
               <span className="method-step">02 / Verify</span>
-              <h3>We test every charge.</h3>
+              <h3>We validate every charge.</h3>
               <p>Eight focused checks compare billed charges with contract and carrier evidence.</p>
               <div className="method-diagram" aria-hidden="true">
                 <span>Invoice</span><i>→</i><span>Expected</span><i>→</i><span>Exception</span>
@@ -321,7 +319,7 @@ export default function Home() {
             <p className="eyebrow" data-reveal>Our promise</p>
             <h2 data-reveal>Clarity in every charge.<br />Confidence in every decision.</h2>
             <div className="promise-grid">
-              <article data-reveal><span>◎</span><h3>Verified accuracy</h3><p>Every discrepancy ties back to a source.</p></article>
+              <article data-reveal><span>◎</span><h3>Verified accuracy</h3><p>Every discrepancy ties back to its source.</p></article>
               <article data-reveal><span>≡</span><h3>Complete visibility</h3><p>See what passed, what failed, and why.</p></article>
               <article data-reveal><span>↗</span><h3>Financial confidence</h3><p>Prioritize recoveries by defensible value.</p></article>
               <article data-reveal><span>◴</span><h3>Actionable insight</h3><p>Turn repeat errors into better controls.</p></article>
@@ -335,7 +333,7 @@ export default function Home() {
             <span>Start with 90 days.</span>
           </div>
           <div className="contact-grid">
-            <h2 data-reveal>Let’s find what<br />your freight spend<br /><em>is hiding.</em></h2>
+            <h2 data-reveal>Let us find what<br />your freight spend<br /><em>is hiding.</em></h2>
             <div className="contact-copy" data-reveal>
               <p>
                 Send us 90 days of transportation invoices, shipment records, and carrier

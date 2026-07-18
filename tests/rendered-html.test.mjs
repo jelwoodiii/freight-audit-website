@@ -23,8 +23,16 @@ test("server-renders the complete Sable landing page", async () => {
   assert.match(html, /<title>Sable — Transportation spend, understood\.<\/title>/i);
   assert.match(html, /Every freight charge/);
   assert.match(html, /must earn its place/);
+  assert.match(html, /Billing errors are far too common/);
+  assert.match(html, /Sable gives you the evidence to take it back/);
   assert.match(html, /5% to 15%/);
-  assert.match(html, /Industry estimate and illustrative scenario only/);
+  assert.match(html, /Industry consensus is that/);
+  assert.match(html, /Sable validates every charge/);
+  assert.match(html, /\$350K/);
+  assert.doesNotMatch(html, /\$50K|\$150K/);
+  assert.match(html, /Industry estimate and illustrative 7% scenario only/);
+  assert.match(html, /Every discrepancy ties back to its source/);
+  assert.match(html, /Let us find what/);
   assert.match(html, /Request a complimentary audit/);
   assert.match(html, /Synthetic data—not a customer claim/);
   assert.match(html, /src="\/sable-mark-upper\.svg"/);

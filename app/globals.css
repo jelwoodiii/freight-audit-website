@@ -419,8 +419,8 @@ a:hover .arrow {
 
 /* Editorial content */
 .thesis {
-  padding-top: clamp(110px, 15vw, 220px);
-  padding-bottom: clamp(100px, 14vw, 210px);
+  padding-top: clamp(80px, 9vw, 140px);
+  padding-bottom: clamp(76px, 8vw, 120px);
   background: var(--stone);
 }
 
@@ -429,7 +429,7 @@ a:hover .arrow {
   grid-template-columns: minmax(0, 1.55fr) minmax(300px, 0.55fr);
   gap: clamp(60px, 10vw, 180px);
   align-items: end;
-  margin-top: clamp(70px, 10vw, 150px);
+  margin-top: clamp(52px, 6vw, 90px);
 }
 
 .thesis h2,
@@ -467,15 +467,15 @@ a:hover .arrow {
 
 .thesis-rail {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  margin-top: clamp(90px, 12vw, 170px);
+  grid-template-columns: repeat(2, 1fr);
+  margin-top: clamp(58px, 7vw, 100px);
   border-top: 1px solid var(--line);
   border-bottom: 1px solid var(--line);
 }
 
 .thesis-rail article {
   display: flex;
-  min-height: 190px;
+  min-height: 164px;
   flex-direction: column;
   padding: 28px 22px 30px;
   border-right: 1px solid var(--line);
@@ -514,7 +514,7 @@ a:hover .arrow {
 }
 
 .checks-section {
-  padding-top: clamp(100px, 13vw, 190px);
+  padding-top: clamp(78px, 8vw, 120px);
   background: var(--ink);
   color: var(--ivory);
 }
@@ -524,7 +524,7 @@ a:hover .arrow {
   grid-template-columns: 0.42fr 1.4fr 0.58fr;
   gap: clamp(32px, 5vw, 90px);
   align-items: start;
-  padding-bottom: clamp(90px, 12vw, 170px);
+  padding-bottom: clamp(64px, 7vw, 100px);
 }
 
 .checks-intro h2 {
@@ -548,7 +548,7 @@ a:hover .arrow {
   grid-template-columns: 0.35fr 1.15fr 1fr 36px;
   gap: 36px;
   align-items: center;
-  min-height: 152px;
+  min-height: 138px;
   padding: 24px clamp(24px, 4vw, 72px);
   border-bottom: 1px solid rgba(246, 244, 239, 0.18);
   transition: background 400ms ease, color 400ms ease;
@@ -597,8 +597,8 @@ a:hover .arrow {
 .method {
   width: 100%;
   max-width: none;
-  padding-top: clamp(110px, 14vw, 210px);
-  padding-bottom: clamp(110px, 14vw, 210px);
+  padding-top: clamp(76px, 8vw, 118px);
+  padding-bottom: clamp(82px, 9vw, 132px);
   background: var(--forest);
   color: var(--ivory);
 }
@@ -612,7 +612,7 @@ a:hover .arrow {
   grid-template-columns: 1.4fr 0.55fr;
   gap: 90px;
   align-items: end;
-  margin-top: clamp(70px, 9vw, 130px);
+  margin-top: clamp(52px, 6vw, 86px);
 }
 
 .method-heading h2 {
@@ -629,14 +629,14 @@ a:hover .arrow {
 .method-steps {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  margin-top: clamp(80px, 11vw, 160px);
+  margin-top: clamp(60px, 7vw, 100px);
   border-top: 1px solid rgba(246, 244, 239, 0.22);
   border-bottom: 1px solid rgba(246, 244, 239, 0.22);
 }
 
 .method-steps article {
   display: flex;
-  min-height: 510px;
+  min-height: 450px;
   flex-direction: column;
   padding: 34px clamp(24px, 3vw, 52px) 40px;
   border-right: 1px solid rgba(246, 244, 239, 0.22);
@@ -660,7 +660,7 @@ a:hover .arrow {
 
 .method-steps h3 {
   max-width: 360px;
-  margin-top: 82px;
+  margin-top: 62px;
   font-family: var(--serif);
   font-size: clamp(34px, 3.2vw, 52px);
   font-weight: 400;
@@ -712,8 +712,8 @@ a:hover .arrow {
 }
 
 .proof {
-  padding-top: clamp(110px, 14vw, 210px);
-  padding-bottom: clamp(110px, 14vw, 210px);
+  padding-top: clamp(78px, 8vw, 120px);
+  padding-bottom: clamp(82px, 9vw, 132px);
   background: var(--stone);
 }
 
@@ -722,7 +722,7 @@ a:hover .arrow {
   grid-template-columns: 0.72fr 1.28fr;
   gap: clamp(58px, 8vw, 130px);
   align-items: center;
-  margin-top: clamp(80px, 10vw, 145px);
+  margin-top: clamp(56px, 7vw, 96px);
 }
 
 .proof-copy h2 {
@@ -906,8 +906,8 @@ a:hover .arrow {
 }
 
 .promise {
-  padding-top: clamp(100px, 12vw, 170px);
-  padding-bottom: clamp(80px, 10vw, 140px);
+  padding-top: clamp(78px, 8vw, 120px);
+  padding-bottom: clamp(66px, 7vw, 100px);
   background: var(--ink);
   color: var(--ivory);
 }
@@ -921,12 +921,12 @@ a:hover .arrow {
 .promise-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  margin-top: clamp(80px, 10vw, 135px);
+  margin-top: clamp(58px, 7vw, 94px);
   border-top: 1px solid rgba(246, 244, 239, 0.24);
 }
 
 .promise-grid article {
-  min-height: 270px;
+  min-height: 236px;
   padding: 30px 28px;
   border-right: 1px solid rgba(246, 244, 239, 0.24);
 }
@@ -942,7 +942,7 @@ a:hover .arrow {
 }
 
 .promise-grid h3 {
-  margin-top: 86px;
+  margin-top: 64px;
   font-size: 11px;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -959,8 +959,8 @@ a:hover .arrow {
 .contact {
   width: 100%;
   max-width: none;
-  padding-top: clamp(90px, 12vw, 180px);
-  padding-bottom: clamp(90px, 12vw, 180px);
+  padding-top: clamp(74px, 8vw, 116px);
+  padding-bottom: clamp(64px, 7vw, 96px);
   background: var(--stone);
   color: var(--ink);
 }
@@ -986,7 +986,7 @@ a:hover .arrow {
   grid-template-columns: 1.45fr 0.55fr;
   gap: clamp(60px, 10vw, 170px);
   align-items: end;
-  margin-top: clamp(70px, 10vw, 145px);
+  margin-top: clamp(54px, 6vw, 88px);
 }
 
 .contact h2 {
@@ -1039,7 +1039,7 @@ a:hover .arrow {
 footer {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  min-height: 340px;
+  min-height: 270px;
   align-items: end;
   gap: 40px;
   padding: 44px clamp(24px, 4vw, 72px);
@@ -1235,14 +1235,14 @@ footer > div:last-child {
   }
 
   .thesis-rail {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr;
   }
 
-  .thesis-rail article:nth-child(2) {
+  .thesis-rail article {
     border-right: 0;
   }
 
-  .thesis-rail article:nth-child(-n+2) {
+  .thesis-rail article:first-child {
     border-bottom: 1px solid var(--line);
   }
 
