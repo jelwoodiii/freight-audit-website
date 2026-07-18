@@ -52,7 +52,7 @@ test("uses the traced vector mark on the green opening scene", async () => {
   assert.match(lowerMark, /C139 109\.705 141 101\.662 133 99\.191L100 89Z/);
 });
 
-test("uses tan editorial sections and a green contact close", async () => {
+test("uses a black promise panel and a tan contact close", async () => {
   const css = await readFile(new URL("../app/globals.css", import.meta.url), "utf8");
 
   assert.match(css, /--ivory:\s*#f6f4ef/i);
@@ -61,5 +61,7 @@ test("uses tan editorial sections and a green contact close", async () => {
   assert.match(css, /\.method\s*\{[^}]*color:\s*var\(--ivory\)/);
   assert.match(css, /\.thesis\s*\{[\s\S]*?background:\s*var\(--stone\)/);
   assert.match(css, /\.proof\s*\{[\s\S]*?background:\s*var\(--stone\)/);
-  assert.match(css, /\.contact\s*\{[\s\S]*?background:\s*var\(--forest\)[\s\S]*?color:\s*var\(--ivory\)/);
+  assert.match(css, /\.promise\s*\{[\s\S]*?background:\s*var\(--ink\)[\s\S]*?color:\s*var\(--ivory\)/);
+  assert.match(css, /\.contact\s*\{[\s\S]*?background:\s*var\(--stone\)[\s\S]*?color:\s*var\(--ink\)/);
+  assert.match(css, /\.site-header\[data-tone="ink"\]\s*\{[^}]*color:\s*var\(--ink\)/);
 });

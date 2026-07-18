@@ -70,8 +70,12 @@ a:focus-visible {
   font-size: 11px;
   font-weight: 600;
   letter-spacing: 0.12em;
-  mix-blend-mode: difference;
   text-transform: uppercase;
+  transition: color 220ms ease;
+}
+
+.site-header[data-tone="ink"] {
+  color: var(--ink);
 }
 
 .header-brand,
@@ -867,7 +871,8 @@ a:hover .arrow {
 .promise {
   padding-top: clamp(100px, 12vw, 170px);
   padding-bottom: clamp(80px, 10vw, 140px);
-  background: var(--stone);
+  background: var(--ink);
+  color: var(--ivory);
 }
 
 .promise h2 {
@@ -880,13 +885,13 @@ a:hover .arrow {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   margin-top: clamp(80px, 10vw, 135px);
-  border-top: 1px solid rgba(11, 15, 16, 0.24);
+  border-top: 1px solid rgba(246, 244, 239, 0.24);
 }
 
 .promise-grid article {
   min-height: 270px;
   padding: 30px 28px;
-  border-right: 1px solid rgba(11, 15, 16, 0.24);
+  border-right: 1px solid rgba(246, 244, 239, 0.24);
 }
 
 .promise-grid article:last-child {
@@ -894,7 +899,7 @@ a:hover .arrow {
 }
 
 .promise-grid article > span {
-  color: var(--forest);
+  color: var(--stone);
   font-family: var(--serif);
   font-size: 36px;
 }
@@ -909,7 +914,7 @@ a:hover .arrow {
 .promise-grid p {
   max-width: 230px;
   margin-top: 14px;
-  color: var(--forest);
+  color: rgba(246, 244, 239, 0.7);
   font-size: 14px;
   line-height: 1.45;
 }
@@ -919,8 +924,8 @@ a:hover .arrow {
   max-width: none;
   padding-top: clamp(90px, 12vw, 180px);
   padding-bottom: clamp(90px, 12vw, 180px);
-  background: var(--forest);
-  color: var(--ivory);
+  background: var(--stone);
+  color: var(--ink);
 }
 
 .contact-kicker {
@@ -928,7 +933,7 @@ a:hover .arrow {
   align-items: center;
   gap: 14px;
   padding-bottom: 26px;
-  border-bottom: 1px solid rgba(246, 244, 239, 0.24);
+  border-bottom: 1px solid rgba(11, 15, 16, 0.24);
   font-size: 10px;
   font-weight: 650;
   letter-spacing: 0.16em;
@@ -952,11 +957,11 @@ a:hover .arrow {
 }
 
 .contact h2 em {
-  color: var(--ivory);
+  color: var(--forest);
 }
 
 .contact-copy > p {
-  color: rgba(246, 244, 239, 0.82);
+  color: rgba(51, 66, 54, 0.9);
   font-size: 18px;
   line-height: 1.55;
 }
@@ -984,7 +989,7 @@ a:hover .arrow {
 .contact-assurance {
   display: block;
   margin-top: 18px;
-  color: rgba(246, 244, 239, 0.64);
+  color: var(--forest);
   font-size: 10px;
   line-height: 1.5;
 }
@@ -1107,7 +1112,7 @@ footer > div:last-child {
   }
 
   .promise-grid article:nth-child(-n+2) {
-    border-bottom: 1px solid rgba(11, 15, 16, 0.24);
+    border-bottom: 1px solid rgba(246, 244, 239, 0.24);
   }
 
   footer {
@@ -1248,7 +1253,7 @@ footer > div:last-child {
   .promise-grid article:nth-child(2) {
     min-height: 220px;
     border-right: 0;
-    border-bottom: 1px solid rgba(11, 15, 16, 0.24);
+    border-bottom: 1px solid rgba(246, 244, 239, 0.24);
   }
 
   .promise-grid h3 {

@@ -27,6 +27,20 @@ export default function Home() {
     if (!scene) return;
 
     const reduced = window.matchMedia("(prefers-reduced-motion: reduce)");
+    const siteHeader = document.querySelector<HTMLElement>(".site-header");
+
+    const updateHeaderTone = () => {
+      if (!siteHeader) return;
+
+      const sampleY = Math.min(84, window.innerHeight / 2);
+      for (const element of document.elementsFromPoint(window.innerWidth / 2, sampleY)) {
+        const tonedSection = element.closest<HTMLElement>("[data-header-tone]");
+        if (tonedSection) {
+          siteHeader.dataset.tone = tonedSection.dataset.headerTone ?? "bone";
+          return;
+        }
+      }
+    };
 
     const updateScene = () => {
       const rect = scene.getBoundingClientRect();
@@ -56,6 +70,8 @@ export default function Home() {
         scene.style.setProperty("--split-size", `${baseSize * (1 + splitProgress * 11)}px`);
         scene.classList.add("motion-ready");
       }
+
+      updateHeaderTone();
     };
 
     let frame = 0;
@@ -93,7 +109,7 @@ export default function Home() {
 
   return (
     <>
-      <header className="site-header">
+      <header className="site-header" data-tone="bone">
         <a className="header-brand" href="#top" aria-label="Sable — home">
           <SplitMark className="split-mark--nav" />
           <span>Sable</span>
@@ -109,7 +125,7 @@ export default function Home() {
       </header>
 
       <main id="top">
-        <section className="split-scene" ref={sceneRef} aria-label="Sable introduction">
+        <section className="split-scene" ref={sceneRef} aria-label="Sable introduction" data-header-tone="bone">
           <div className="scene-sticky">
             <div className="scene-grid" aria-hidden="true" />
             <div className="scene-dark-field" aria-hidden="true" />
@@ -149,7 +165,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="thesis section-shell" id="thesis">
+        <section className="thesis section-shell" id="thesis" data-header-tone="ink">
           <div className="section-index" data-reveal>
             <span>01</span>
             <span>The thesis</span>
@@ -180,7 +196,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="checks-section" aria-labelledby="checks-title">
+        <section className="checks-section" aria-labelledby="checks-title" data-header-tone="bone">
           <div className="checks-intro section-shell">
             <p className="eyebrow" data-reveal>Where we look</p>
             <h2 id="checks-title" data-reveal>
@@ -203,7 +219,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="method section-shell" id="method">
+        <section className="method section-shell" id="method" data-header-tone="bone">
           <div className="section-index section-index--light" data-reveal>
             <span>02</span>
             <span>The method</span>
@@ -243,7 +259,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="proof section-shell" id="proof">
+        <section className="proof section-shell" id="proof" data-header-tone="ink">
           <div className="section-index" data-reveal>
             <span>03</span>
             <span>The proof</span>
@@ -293,7 +309,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="promise">
+        <section className="promise" data-header-tone="bone">
           <div className="section-shell">
             <p className="eyebrow" data-reveal>Our promise</p>
             <h2 data-reveal>Clarity in every charge.<br />Confidence in every decision.</h2>
@@ -306,7 +322,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="contact section-shell" id="contact">
+        <section className="contact section-shell" id="contact" data-header-tone="ink">
           <div className="contact-kicker" data-reveal>
             <SplitMark className="split-mark--contact" />
             <span>Start with 90 days.</span>
@@ -328,7 +344,7 @@ export default function Home() {
         </section>
       </main>
 
-      <footer>
+      <footer data-header-tone="bone">
         <div className="footer-brand"><SplitMark className="split-mark--footer" /> Sable</div>
         <p>Transportation spend, understood.</p>
         <div><span>Freight audit for mid-market shippers</span><span>© 2026 Sable</span></div>
