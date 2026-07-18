@@ -64,6 +64,6 @@ test("uses a black promise panel and a tan contact close", async () => {
   assert.match(css, /\.promise\s*\{[\s\S]*?background:\s*var\(--ink\)[\s\S]*?color:\s*var\(--ivory\)/);
   assert.match(css, /\.contact\s*\{[\s\S]*?background:\s*var\(--stone\)[\s\S]*?color:\s*var\(--ink\)/);
   assert.match(css, /\.site-header\[data-tone="ink"\]\s*\{[^}]*color:\s*var\(--ink\)/);
-  assert.match(css, /\.site-header\s*\{[\s\S]*?backdrop-filter:\s*blur\(20px\)/);
+  assert.match(css, /\.site-header\s*\{[\s\S]*?backdrop-filter:\s*blur\(8px\)/);
   assert.match(css, /\.contact-button\s*\{[\s\S]*?background:\s*var\(--forest\)/);
 });
