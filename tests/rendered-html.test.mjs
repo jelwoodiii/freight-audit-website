@@ -22,6 +22,9 @@ test("server-renders the complete Sable landing page", async () => {
   const html = await response.text();
   assert.match(html, /<title>Sable — Transportation spend, understood\.<\/title>/i);
   assert.match(html, /Every freight charge/);
+  assert.match(html, /must earn its place/);
+  assert.match(html, /5% to 15%/);
+  assert.match(html, /Industry estimate and illustrative scenario only/);
   assert.match(html, /Request a complimentary audit/);
   assert.match(html, /Synthetic data—not a customer claim/);
   assert.match(html, /src="\/sable-mark-upper\.svg"/);
@@ -40,6 +43,8 @@ test("uses the traced vector mark on the green opening scene", async () => {
   assert.match(css, /mask:\s*url\("\/sable-mark\.svg"\)/);
   assert.match(css, /\.scene-sticky[\s\S]*?background:\s*var\(--forest\)/);
   assert.match(css, /--split-progress:\s*0/);
+  assert.match(css, /--intro-ink-progress:\s*0/);
+  assert.match(css, /filter:\s*blur\(calc\(var\(--intro-exit-progress\) \* 10px\)\)/);
   assert.match(css, /\.split-scene\.motion-ready \.split-mark--hero[\s\S]*?visibility:\s*hidden/);
   assert.match(css, /\.scene-split[\s\S]*?left:\s*var\(--split-x\)/);
   assert.doesNotMatch(css, /\.hero-piece--upper\s*\{[^}]*scale\(/);

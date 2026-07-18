@@ -211,6 +211,8 @@ a:hover .arrow {
 .split-scene {
   --progress: 0;
   --split-progress: 0;
+  --intro-ink-progress: 0;
+  --intro-exit-progress: 0;
   --split-size: clamp(110px, 12vw, 190px);
   --split-x: 50vw;
   --split-y: 50svh;
@@ -253,7 +255,8 @@ a:hover .arrow {
   top: 50%;
   left: 50%;
   width: min(88vw, 900px);
-  color: var(--ivory);
+  color: color-mix(in srgb, var(--ivory) calc((1 - var(--intro-ink-progress)) * 100%), var(--ink));
+  filter: blur(calc(var(--intro-exit-progress) * 10px));
   text-align: center;
   opacity: clamp(0, calc((0.26 - var(--progress)) * 5), 1);
   transform: translate(-50%, -50%) scale(calc(1 + var(--progress) * 0.28));
@@ -292,7 +295,7 @@ a:hover .arrow {
 }
 
 .scene-intro em {
-  color: var(--stone);
+  color: inherit;
   font-style: normal;
 }
 
@@ -470,18 +473,44 @@ a:hover .arrow {
   border-bottom: 1px solid var(--line);
 }
 
-.thesis-rail span {
-  padding: 28px 22px;
+.thesis-rail article {
+  display: flex;
+  min-height: 190px;
+  flex-direction: column;
+  padding: 28px 22px 30px;
   border-right: 1px solid var(--line);
+}
+
+.thesis-rail strong {
+  font-family: var(--serif);
+  font-size: clamp(40px, 4vw, 66px);
+  font-weight: 400;
+  letter-spacing: -0.04em;
+  line-height: 1;
+}
+
+.thesis-rail article span {
+  max-width: 190px;
+  margin-top: auto;
   font-size: 10px;
   font-weight: 650;
   letter-spacing: 0.13em;
-  text-align: center;
+  line-height: 1.45;
   text-transform: uppercase;
 }
 
-.thesis-rail span:last-child {
+.thesis-rail article:last-child {
   border-right: 0;
+}
+
+.thesis-context {
+  max-width: 720px;
+  margin-top: 16px;
+  color: var(--forest);
+  font-size: 9px;
+  letter-spacing: 0.07em;
+  line-height: 1.5;
+  text-transform: uppercase;
 }
 
 .checks-section {
@@ -1209,11 +1238,11 @@ footer > div:last-child {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .thesis-rail span:nth-child(2) {
+  .thesis-rail article:nth-child(2) {
     border-right: 0;
   }
 
-  .thesis-rail span:nth-child(-n+2) {
+  .thesis-rail article:nth-child(-n+2) {
     border-bottom: 1px solid var(--line);
   }
 

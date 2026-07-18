@@ -49,8 +49,12 @@ export default function Home() {
         ? 1
         : Math.min(1, Math.max(0, -rect.top / distance));
       const splitProgress = Math.min(1, Math.max(0, (progress - 0.1) / 0.62));
+      const introInkProgress = Math.min(1, Math.max(0, (progress - 0.02) / 0.14));
+      const introExitProgress = Math.min(1, Math.max(0, (progress - 0.08) / 0.18));
       scene.style.setProperty("--progress", progress.toFixed(4));
       scene.style.setProperty("--split-progress", splitProgress.toFixed(4));
+      scene.style.setProperty("--intro-ink-progress", introInkProgress.toFixed(4));
+      scene.style.setProperty("--intro-exit-progress", introExitProgress.toFixed(4));
 
       const heroMark = heroMarkRef.current;
       if (heroMark) {
@@ -145,7 +149,7 @@ export default function Home() {
 
             <div className="scene-reveal">
               <p className="eyebrow">Freight audit, without the fog</p>
-              <h1>Every freight charge<br />should earn its place.</h1>
+              <h1>Every freight charge<br />must earn its place.</h1>
               <div className="reveal-support">
                 <p>
                   We audit transportation invoices against your agreements, shipment records,
@@ -172,28 +176,31 @@ export default function Home() {
           </div>
           <div className="thesis-grid">
             <h2 data-reveal>
-              The invoice says <em>one number.</em><br />
-              Your agreement may say another.
+              Billing errors are not the exception.<br />
+              <em>They are the operating environment.</em>
             </h2>
             <div className="thesis-copy" data-reveal>
               <p>
-                Freight invoices are dense by design. Rates, fuel, accessorials,
-                classes, weights, and minimums all interact—making small errors
-                expensive and difficult to defend.
+                Freight-audit providers commonly estimate that 5% to 15% of
+                transportation invoices contain errors. The exact rate varies by
+                mode, carrier mix, contract complexity, and internal controls.
               </p>
               <p>
-                Sable turns each exception into a clear claim: what was billed,
-                what should have been billed, the recoverable difference, and the
-                evidence behind it.
+                At $5 million in annual transportation spend, every single
+                percentage point equals $50,000. Sable tests each charge before
+                it becomes accepted spend.
               </p>
             </div>
           </div>
           <div className="thesis-rail" data-reveal>
-            <span>Verified accuracy</span>
-            <span>Complete visibility</span>
-            <span>Financial confidence</span>
-            <span>Actionable evidence</span>
+            <article><strong>5–15%</strong><span>Commonly cited invoice-error range</span></article>
+            <article><strong>$50K</strong><span>Every 1% of $5M in annual spend</span></article>
+            <article><strong>$150K</strong><span>At 3% billing leakage on $5M</span></article>
+            <article><strong>$350K</strong><span>At 7% billing leakage on $5M</span></article>
           </div>
+          <p className="thesis-context" data-reveal>
+            Industry estimate and illustrative scenario only. Actual invoice-error and recovery rates vary.
+          </p>
         </section>
 
         <section className="checks-section" aria-labelledby="checks-title" data-header-tone="bone">
