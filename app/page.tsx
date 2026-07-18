@@ -90,7 +90,7 @@ export default function Home() {
           if (entry.isIntersecting) entry.target.classList.add("is-visible");
         });
       },
-      { threshold: 0.14 },
+      { rootMargin: "0px 0px -20% 0px", threshold: 0.08 },
     );
 
     document.querySelectorAll<HTMLElement>("[data-reveal]").forEach((node) => {
@@ -169,36 +169,38 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="thesis section-shell" id="thesis" data-header-tone="ink">
-          <div className="section-index" data-reveal>
-            <span>01</span>
-            <span>The thesis</span>
-          </div>
-          <div className="thesis-grid">
-            <h2 data-reveal>
-              Billing errors are far too common.<br />
-              <em>Sable gives you the evidence to take it back.</em>
-            </h2>
-            <div className="thesis-copy" data-reveal>
-              <p>
-                Industry consensus is that 5% to 15% of transportation invoices
-                contain errors. The exact rate varies by mode, carrier mix,
-                contract complexity, and internal controls.
-              </p>
-              <p>
-                At $5 million in annual transportation spend, 7% in billing
-                leakage equals $350,000. Sable validates every charge before it
-                becomes accepted spend.
-              </p>
+        <section className="thesis" id="thesis" data-header-tone="ink">
+          <div className="section-shell">
+            <div className="section-index" data-reveal>
+              <span>01</span>
+              <span>The thesis</span>
             </div>
+            <div className="thesis-grid">
+              <h2 data-reveal>
+                Billing errors are far too common.<br />
+                <em>Sable gives you the evidence to take it back.</em>
+              </h2>
+              <div className="thesis-copy" data-reveal>
+                <p>
+                  Industry consensus is that 5% to 15% of transportation invoices
+                  contain errors. The exact rate varies by mode, carrier mix,
+                  contract complexity, and internal controls.
+                </p>
+                <p>
+                  At $5 million in annual transportation spend, 7% in billing
+                  leakage equals $350,000. Sable validates every charge before it
+                  becomes accepted spend.
+                </p>
+              </div>
+            </div>
+            <div className="thesis-rail" data-reveal>
+              <article><strong>5–15%</strong><span>Industry consensus invoice-error range</span></article>
+              <article><strong>$350K</strong><span>At 7% billing leakage on $5M</span></article>
+            </div>
+            <p className="thesis-context" data-reveal>
+              Industry estimate and illustrative 7% scenario only. Actual invoice-error and recovery rates vary.
+            </p>
           </div>
-          <div className="thesis-rail" data-reveal>
-            <article><strong>5–15%</strong><span>Industry consensus invoice-error range</span></article>
-            <article><strong>$350K</strong><span>At 7% billing leakage on $5M</span></article>
-          </div>
-          <p className="thesis-context" data-reveal>
-            Industry estimate and illustrative 7% scenario only. Actual invoice-error and recovery rates vary.
-          </p>
         </section>
 
         <section className="checks-section" aria-labelledby="checks-title" data-header-tone="bone">
@@ -264,50 +266,52 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="proof section-shell" id="proof" data-header-tone="ink">
-          <div className="section-index" data-reveal>
-            <span>03</span>
-            <span>The proof</span>
-          </div>
-          <div className="proof-grid">
-            <div className="proof-copy" data-reveal>
-              <p className="eyebrow">Built to show its work</p>
-              <h2>Not a black box.<br /><em>An evidence file.</em></h2>
-              <p>
-                Every finding carries the source invoice, the expected charge,
-                the violated term or schedule, and the dollar difference. Your
-                team can understand it before it acts on it.
-              </p>
-              <div className="proof-note">
-                <span>Controlled demo result</span>
-                <span>Synthetic data—not a customer claim</span>
-              </div>
+        <section className="proof" id="proof" data-header-tone="ink">
+          <div className="section-shell">
+            <div className="section-index" data-reveal>
+              <span>03</span>
+              <span>The proof</span>
             </div>
-
-            <div className="audit-card" data-reveal aria-label="Example audit summary">
-              <div className="audit-card__top">
-                <div className="audit-brand"><SplitMark className="split-mark--tiny" /> Sable</div>
-                <span>Audit summary / DEMO-001</span>
-              </div>
-              <div className="audit-metrics">
-                <div><span>Invoices audited</span><strong>15</strong><small>4 formats normalized</small></div>
-                <div><span>Findings</span><strong>15</strong><small>8 checks applied</small></div>
-                <div><span>Potential recovery</span><strong>$5,220.90</strong><small>Controlled test set</small></div>
-              </div>
-              <div className="audit-detail">
-                <div>
-                  <span className="audit-detail__label">Exception categories</span>
-                  <ul>
-                    <li><span>Duplicate billing</span><i style={{ "--bar": "91%" } as React.CSSProperties} /></li>
-                    <li><span>Invoice consistency</span><i style={{ "--bar": "67%" } as React.CSSProperties} /></li>
-                    <li><span>Fuel surcharge</span><i style={{ "--bar": "52%" } as React.CSSProperties} /></li>
-                    <li><span>Contract & accessorial</span><i style={{ "--bar": "38%" } as React.CSSProperties} /></li>
-                  </ul>
+            <div className="proof-grid">
+              <div className="proof-copy" data-reveal>
+                <p className="eyebrow">Built to show its work</p>
+                <h2>Not a black box.<br /><em>An evidence file.</em></h2>
+                <p>
+                  Every finding carries the source invoice, the expected charge,
+                  the violated term or schedule, and the dollar difference. Your
+                  team can understand it before it acts on it.
+                </p>
+                <div className="proof-note">
+                  <span>Controlled demo result</span>
+                  <span>Synthetic data—not a customer claim</span>
                 </div>
-                <div className="evidence-stamp">
-                  <span className="evidence-stamp__ring">✓</span>
-                  <strong>Evidence<br />attached</strong>
-                  <small>Source + rule + delta</small>
+              </div>
+
+              <div className="audit-card" data-reveal aria-label="Example audit summary">
+                <div className="audit-card__top">
+                  <div className="audit-brand"><SplitMark className="split-mark--tiny" /> Sable</div>
+                  <span>Audit summary / DEMO-001</span>
+                </div>
+                <div className="audit-metrics">
+                  <div><span>Invoices audited</span><strong>15</strong><small>4 formats normalized</small></div>
+                  <div><span>Findings</span><strong>15</strong><small>8 checks applied</small></div>
+                  <div><span>Potential recovery</span><strong>$5,220.90</strong><small>Controlled test set</small></div>
+                </div>
+                <div className="audit-detail">
+                  <div>
+                    <span className="audit-detail__label">Exception categories</span>
+                    <ul>
+                      <li><span>Duplicate billing</span><i style={{ "--bar": "91%" } as React.CSSProperties} /></li>
+                      <li><span>Invoice consistency</span><i style={{ "--bar": "67%" } as React.CSSProperties} /></li>
+                      <li><span>Fuel surcharge</span><i style={{ "--bar": "52%" } as React.CSSProperties} /></li>
+                      <li><span>Contract & accessorial</span><i style={{ "--bar": "38%" } as React.CSSProperties} /></li>
+                    </ul>
+                  </div>
+                  <div className="evidence-stamp">
+                    <span className="evidence-stamp__ring">✓</span>
+                    <strong>Evidence<br />attached</strong>
+                    <small>Source + rule + delta</small>
+                  </div>
                 </div>
               </div>
             </div>

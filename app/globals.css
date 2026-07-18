@@ -15,6 +15,8 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 76px;
+  scroll-snap-type: y proximity;
   background: var(--ivory);
 }
 
@@ -164,6 +166,12 @@ a:hover .arrow {
   margin: 0 auto;
   padding-right: clamp(24px, 4vw, 72px);
   padding-left: clamp(24px, 4vw, 72px);
+}
+
+main > section:not(.split-scene),
+footer {
+  scroll-snap-align: start;
+  scroll-snap-stop: normal;
 }
 
 .eyebrow {
@@ -352,7 +360,7 @@ a:hover .arrow {
   font-size: clamp(52px, 8.35vw, 142px);
   font-weight: 400;
   letter-spacing: -0.055em;
-  line-height: 0.88;
+  line-height: 0.98;
 }
 
 .reveal-support {
@@ -419,8 +427,8 @@ a:hover .arrow {
 
 /* Editorial content */
 .thesis {
-  padding-top: clamp(80px, 9vw, 140px);
-  padding-bottom: clamp(76px, 8vw, 120px);
+  padding-top: clamp(64px, 6vw, 96px);
+  padding-bottom: clamp(42px, 4vw, 64px);
   background: var(--stone);
 }
 
@@ -429,7 +437,7 @@ a:hover .arrow {
   grid-template-columns: minmax(0, 1.55fr) minmax(300px, 0.55fr);
   gap: clamp(60px, 10vw, 180px);
   align-items: end;
-  margin-top: clamp(52px, 6vw, 90px);
+  margin-top: clamp(44px, 5vw, 72px);
 }
 
 .thesis h2,
@@ -442,7 +450,7 @@ a:hover .arrow {
   font-size: clamp(54px, 7.2vw, 122px);
   font-weight: 400;
   letter-spacing: -0.052em;
-  line-height: 0.96;
+  line-height: 1.06;
 }
 
 .thesis h2 em,
@@ -468,7 +476,7 @@ a:hover .arrow {
 .thesis-rail {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  margin-top: clamp(58px, 7vw, 100px);
+  margin-top: clamp(46px, 5vw, 72px);
   border-top: 1px solid var(--line);
   border-bottom: 1px solid var(--line);
 }
@@ -514,7 +522,7 @@ a:hover .arrow {
 }
 
 .checks-section {
-  padding-top: clamp(78px, 8vw, 120px);
+  padding-top: clamp(48px, 5vw, 72px);
   background: var(--ink);
   color: var(--ivory);
 }
@@ -524,7 +532,7 @@ a:hover .arrow {
   grid-template-columns: 0.42fr 1.4fr 0.58fr;
   gap: clamp(32px, 5vw, 90px);
   align-items: start;
-  padding-bottom: clamp(64px, 7vw, 100px);
+  padding-bottom: clamp(54px, 6vw, 84px);
 }
 
 .checks-intro h2 {
@@ -597,8 +605,8 @@ a:hover .arrow {
 .method {
   width: 100%;
   max-width: none;
-  padding-top: clamp(76px, 8vw, 118px);
-  padding-bottom: clamp(82px, 9vw, 132px);
+  padding-top: clamp(58px, 6vw, 84px);
+  padding-bottom: clamp(68px, 7vw, 102px);
   background: var(--forest);
   color: var(--ivory);
 }
@@ -612,7 +620,7 @@ a:hover .arrow {
   grid-template-columns: 1.4fr 0.55fr;
   gap: 90px;
   align-items: end;
-  margin-top: clamp(52px, 6vw, 86px);
+  margin-top: clamp(44px, 5vw, 70px);
 }
 
 .method-heading h2 {
@@ -629,14 +637,14 @@ a:hover .arrow {
 .method-steps {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  margin-top: clamp(60px, 7vw, 100px);
+  margin-top: clamp(50px, 6vw, 82px);
   border-top: 1px solid rgba(246, 244, 239, 0.22);
   border-bottom: 1px solid rgba(246, 244, 239, 0.22);
 }
 
 .method-steps article {
   display: flex;
-  min-height: 450px;
+  min-height: 420px;
   flex-direction: column;
   padding: 34px clamp(24px, 3vw, 52px) 40px;
   border-right: 1px solid rgba(246, 244, 239, 0.22);
@@ -665,7 +673,7 @@ a:hover .arrow {
   font-size: clamp(34px, 3.2vw, 52px);
   font-weight: 400;
   letter-spacing: -0.035em;
-  line-height: 1;
+  line-height: 1.06;
 }
 
 .method-steps p {
@@ -712,8 +720,8 @@ a:hover .arrow {
 }
 
 .proof {
-  padding-top: clamp(78px, 8vw, 120px);
-  padding-bottom: clamp(82px, 9vw, 132px);
+  padding-top: clamp(58px, 6vw, 86px);
+  padding-bottom: clamp(68px, 7vw, 102px);
   background: var(--stone);
 }
 
@@ -722,7 +730,7 @@ a:hover .arrow {
   grid-template-columns: 0.72fr 1.28fr;
   gap: clamp(58px, 8vw, 130px);
   align-items: center;
-  margin-top: clamp(56px, 7vw, 96px);
+  margin-top: clamp(46px, 5vw, 74px);
 }
 
 .proof-copy h2 {
@@ -906,8 +914,8 @@ a:hover .arrow {
 }
 
 .promise {
-  padding-top: clamp(78px, 8vw, 120px);
-  padding-bottom: clamp(66px, 7vw, 100px);
+  padding-top: clamp(60px, 6vw, 88px);
+  padding-bottom: clamp(52px, 5vw, 76px);
   background: var(--ink);
   color: var(--ivory);
 }
@@ -921,7 +929,7 @@ a:hover .arrow {
 .promise-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  margin-top: clamp(58px, 7vw, 94px);
+  margin-top: clamp(48px, 5vw, 72px);
   border-top: 1px solid rgba(246, 244, 239, 0.24);
 }
 
@@ -959,8 +967,8 @@ a:hover .arrow {
 .contact {
   width: 100%;
   max-width: none;
-  padding-top: clamp(74px, 8vw, 116px);
-  padding-bottom: clamp(64px, 7vw, 96px);
+  padding-top: clamp(58px, 6vw, 84px);
+  padding-bottom: clamp(50px, 5vw, 72px);
   background: var(--stone);
   color: var(--ink);
 }
@@ -986,7 +994,7 @@ a:hover .arrow {
   grid-template-columns: 1.45fr 0.55fr;
   gap: clamp(60px, 10vw, 170px);
   align-items: end;
-  margin-top: clamp(54px, 6vw, 88px);
+  margin-top: clamp(44px, 5vw, 70px);
 }
 
 .contact h2 {
@@ -1059,7 +1067,7 @@ footer > p {
   align-self: center;
   font-family: var(--serif);
   font-size: clamp(30px, 3vw, 48px);
-  line-height: 1;
+  line-height: 1.08;
 }
 
 footer > div:last-child {
@@ -1209,7 +1217,7 @@ footer > div:last-child {
   .scene-reveal h1 {
     margin-top: 12px;
     font-size: clamp(45px, 14vw, 76px);
-    line-height: 0.92;
+    line-height: 1;
   }
 
   .reveal-support {
@@ -1319,6 +1327,7 @@ footer > div:last-child {
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
+    scroll-snap-type: none;
   }
 
   *,

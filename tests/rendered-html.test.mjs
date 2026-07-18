@@ -80,3 +80,17 @@ test("uses a black promise panel and a tan contact close", async () => {
   assert.match(css, /\.site-header\s*\{[\s\S]*?backdrop-filter:\s*blur\(8px\)/);
   assert.match(css, /\.contact-button\s*\{[\s\S]*?background:\s*var\(--forest\)/);
 });
+
+test("paces full-bleed sections with readable display type", async () => {
+  const [css, page] = await Promise.all([
+    readFile(new URL("../app/globals.css", import.meta.url), "utf8"),
+    readFile(new URL("../app/page.tsx", import.meta.url), "utf8"),
+  ]);
+
+  assert.match(css, /scroll-snap-type:\s*y proximity/);
+  assert.match(css, /scroll-snap-align:\s*start/);
+  assert.match(css, /\.thesis h2,[\s\S]*?line-height:\s*1\.06/);
+  assert.match(page, /className="thesis"/);
+  assert.match(page, /className="proof"/);
+  assert.match(page, /rootMargin:\s*"0px 0px -20% 0px"/);
+});
