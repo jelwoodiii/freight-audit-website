@@ -168,8 +168,10 @@ a:hover .arrow {
   padding-left: clamp(24px, 4vw, 72px);
 }
 
-main > section:not(.split-scene),
-footer {
+.thesis,
+.method,
+.proof,
+.contact {
   scroll-snap-align: start;
   scroll-snap-stop: normal;
 }

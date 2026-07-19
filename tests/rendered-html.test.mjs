@@ -89,8 +89,11 @@ test("paces full-bleed sections with readable display type", async () => {
 
   assert.match(css, /scroll-snap-type:\s*y proximity/);
   assert.match(css, /scroll-snap-align:\s*start/);
+  assert.doesNotMatch(css, /main > section:not\(\.split-scene\)/);
   assert.match(css, /\.thesis h2,[\s\S]*?line-height:\s*1\.06/);
   assert.match(page, /className="thesis"/);
   assert.match(page, /className="proof"/);
+  assert.match(page, /querySelectorAll<HTMLElement>\("main > section, footer"\)/);
+  assert.match(page, /section\.querySelectorAll<HTMLElement>\("\[data-reveal\]"\)/);
   assert.match(page, /rootMargin:\s*"0px 0px -20% 0px"/);
 });

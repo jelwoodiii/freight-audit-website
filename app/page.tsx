@@ -87,14 +87,20 @@ export default function Home() {
     const revealObserver = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
-          if (entry.isIntersecting) entry.target.classList.add("is-visible");
+          if (!entry.isIntersecting) return;
+
+          const section = entry.target as HTMLElement;
+          section.querySelectorAll<HTMLElement>("[data-reveal]").forEach((node) => {
+            node.classList.add("is-visible");
+          });
+          revealObserver.unobserve(section);
         });
       },
-      { rootMargin: "0px 0px -20% 0px", threshold: 0.08 },
+      { rootMargin: "0px 0px -20% 0px", threshold: 0.01 },
     );
 
-    document.querySelectorAll<HTMLElement>("[data-reveal]").forEach((node) => {
-      revealObserver.observe(node);
+    document.querySelectorAll<HTMLElement>("main > section, footer").forEach((section) => {
+      if (section.querySelector("[data-reveal]")) revealObserver.observe(section);
     });
 
     updateScene();
